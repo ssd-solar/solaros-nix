@@ -1,4 +1,4 @@
-import "${import ../lib/nixpkgs.nix}/nixos/tests/make-test-python.nix" ({ pkgs, ...} : {
+{ pkgs, ...} : {
   name = "install";
   meta = with pkgs.stdenv.lib.maintainers; {
     maintainers = [ mkg20001 ];
@@ -20,4 +20,4 @@ import "${import ../lib/nixpkgs.nix}/nixos/tests/make-test-python.nix" ({ pkgs, 
 
     machine.succeed("quick-install-vm /dev/$(lsblk -d -o name | grep '^sd' | tail -n 1)")
   '';
-})
+}

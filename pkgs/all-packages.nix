@@ -39,7 +39,7 @@ lib.makeScope pkgs.newScope (self: with self; {
   # m
   makeIcon = callPackage ./make-icon {};
   # n
-  nixinstall = lib.recurseIntoAttrs (callPackage "${installerSrc}/nix" { });
+  nixinstall = callPackage "${installerSrc}/nix" { };
   # o
   # p
   # q

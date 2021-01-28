@@ -6,6 +6,7 @@ with lib;
   imports = [
     ./base
     ./de
+    ./flakes.nix
   ];
 
   # add our stuff. take over the repos ^^

@@ -1,7 +1,6 @@
 
 .PHONY: update build-all-iso
 update:
-	bash update.sh
 	make -C pkgs update
 build-all-iso:
 	nix-build release.nix -A isoAll -j auto
@@ -12,7 +11,6 @@ channels:
 	nix-build release.nix -A allChannels
 clean:
 	rm -f *.qcow2 *.img
-
 
 
 .PHONY: build-vm-cinnamon start-vm-cinnamon
